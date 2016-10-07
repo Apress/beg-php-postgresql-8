@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+   <rss version="2.0">
+   <channel>
+      <title>Jason Gilmore</title>
+      <link>http://blogs.apress.com/</link>
+
+   <item>
+      <title>Ohio LinuxFest 2005</title>
+      <link>http://blogs.apress.com/archives/000639.html</link>
+      <description>The annual Ohio LinuxFest 2005 conference is rapidly 
+      approaching, taking place at the Columbus Convention Center on October 1, 
+      2005...</description>
+   </item>
+
+   <item>
+      <title>Retrieving Map Location Coordinates</title>
+      <link>http://blogs.apress.com/archives/000634.html</link>
+      <description>In the first installment of a three-part series for 
+      Developer.com, you learned how to take advantage of Google&apos;s amazing 
+      mapping API...</description>
+   </item>
+
+   <item>
+      <title>Pro PHP Security Published</title>
+      <link>http://blogs.apress.com/archives/000626.html</link>
+      <description>The Web&apos;s greatest advantage, accessibility, has also 
+      proved to be its greatest detriment in terms of security...</description>
+   </item>
+   </channel>
+   </rss>

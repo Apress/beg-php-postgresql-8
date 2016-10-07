@@ -1,0 +1,47 @@
+<?xml version="1.0" ?> 
+  <definitions name="boxing" 
+               targetNamespace="http://www.example.com/boxing" 
+    xmlns:tns="http://www.example.com/boxing" 
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
+    xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" 
+    xmlns="http://schemas.xmlsoap.org/wsdl/"> 
+
+    <message name="getQuoteRequest"> 
+      <part name="boxer" type="xsd:string" /> 
+     </message> 
+
+     <message name="getQuoteResponse"> 
+       <part name="return" type="xsd:string" /> 
+     </message> 
+
+     <portType name="QuotePortType"> 
+       <operation name="getQuote"> 
+         <input message="tns:getQuoteRequest" /> 
+         <output message="tns:getQuoteResponse" /> 
+       </operation> 
+     </portType> 
+
+     <binding name="QuoteBinding" type="tns:QuotePortType"> 
+       <soap:binding 
+             style="rpc" transport="http://schemas.xmlsoap.org/soap/http" /> 
+       <operation name="getQuote"> 
+         <soap:operation soapAction="" /> 
+           <input> 
+             <soap:body use="encoded"                
+              encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" /> 
+           </input> 
+           <output> 
+             <soap:body use="encoded" 
+             encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" /> 
+           </output> 
+       </operation> 
+     </binding> 
+
+    <service name="boxing"> 
+      <documentation>Returns quote from famous pugilists</documentation> 
+      <port name="QuotePort" binding="tns:QuoteBinding"> 
+         <soap:address 
+          location="http://localhost/book/20/boxing/boxingserver.php" /> 
+      </port> 
+    </service> 
+  </definitions>
